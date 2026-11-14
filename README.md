@@ -1,9 +1,8 @@
+
 # CNN-based Automatic RF Modulation Classification
 
-Code behind the Group 25 project report (Applications of AI for Electronic Systems, UEC523, TIET Patiala).
 It analyses MacLellan, Crockett & Stewart, *RFSoC Modulation Classification With Streaming CNN: Data Set Generation & Quantized-Aware Training*, IEEE OJCAS 6, 2025 (doi:10.1109/OJCAS.2024.3509627), and reproduces its quantisation study **in software on simulated data**.
 
-**Scope.** Pure NumPy. No RFSoC hardware, no Brevitas, no DeepRFSoC data set. Only trends can be compared with the paper, not absolute accuracy.
 
 ## Contents
 | Path | Purpose |
@@ -22,9 +21,9 @@ It analyses MacLellan, Crockett & Stewart, *RFSoC Modulation Classification With
 ## Run (from the repository root)
 ```bash
 pip install -r requirements.txt
-python src/gen.py                       # ~7 s, writes data.npz
-python src/bench.py                     # gradient check
-python src/run.py                       # ~25 min on one CPU core
+python src/gen.py                       
+python src/bench.py                     
+python src/run.py                      
 python src/run2.py
 python src/run3.py QAT_2w16a
 python src/run3.py MP_c4_d2
